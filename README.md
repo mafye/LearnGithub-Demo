@@ -69,3 +69,40 @@
 ---
 
 本 README 同时作为本次操作的记录。若需要把仓库发布到 GitHub 或创建保护分支与 Secrets，请告知。
+
+## 步进演示：分支操作 — 第一步（创建并查看 feature 分支）
+
+已执行的操作（演示分支 feature/step1）：
+
+1. 在本地创建并切换到 feature 分支：
+
+   git checkout -b feature/step1
+
+2. 在该分支上对 index.html 进行了修改（示例添加一段内容），提交并推送到了远程：
+
+   git add index.html
+   git commit -m "feat(step1): add feature step1 content"
+   git push --set-upstream origin feature/step1
+
+3. 如何查看并比较分支（在本地）：
+
+   # 切换到 feature 分支查看其内容
+   git checkout feature/step1
+   # 查看修改状态与提交历史
+   git status
+   git log --oneline --graph --decorate --all
+
+   # 比较 main 与 feature/step1 的差异（在任一分支上运行）
+   git fetch origin
+   git diff main..feature/step1
+
+   # 切回 main 查看主线内容（此时不会包含 feature 的改动）
+   git checkout main
+   # 在本地打开或查看 index.html 来对比差异
+
+4. 当前状态：
+
+   - 已在远程创建并推送分支：feature/step1
+   - main 分支保持不变，feature/step1 包含示例变更
+
+请按照上述步骤在你的本地或编辑器中查看分支内容并确认理解，确认后告知准备继续下一步演示（例如在 feature 分支上运行或创建 Pull Request）。
