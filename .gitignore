@@ -1,0 +1,5 @@
+# Ignore node modules and local env
+node_modules/
+.env
+.vs/
+.DS_Store
