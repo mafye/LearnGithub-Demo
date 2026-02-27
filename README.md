@@ -106,3 +106,5 @@
    - main 分支保持不变，feature/step1 包含示例变更
 
 请按照上述步骤在你的本地或编辑器中查看分支内容并确认理解，确认后告知准备继续下一步演示（例如在 feature 分支上运行或创建 Pull Request）。
+
+CI triggered at 2026-02-27 09:41:29 by Copilot
