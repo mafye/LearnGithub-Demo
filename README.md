@@ -125,3 +125,32 @@ CI triggered at 2026-02-27 09:41:29 by Copilot
 
 
 
+
+
+
+## PR（Pull Request）与审查（通俗说明）
+
+
+
+- PR 是什么：PR 就是请求把某个分支（比如 feature/xxx）的改动合并到另一个分支（通常是 main）。它是一个在线的“合并申请”。
+
+- 元数据：标题（title）和描述（description）说明改动意图；Reviewers 是你希望别人审查的人；Labels 用来分类（bug、enhancement）；Milestone 关联目标版本或里程碑。
+
+- 自动检查（Checks）：仓库通常会在 PR 上跑自动化检查（CI、测试、lint），这些检查的通过情况会显示在 PR 页面。若检查失败，通常需要修复后才能合并。
+
+- 评论与审查（Review）：其他人可以在 PR 上发表评论、提出修改建议（request changes）或直接批准（approve）。你可以根据反馈更新分支（push 新提交），PR 会自动更新。
+
+- 合并方式：
+
+  - Create a merge commit（默认）：保留分支的历史并生成一个合并提交；
+
+  - Squash and merge：把分支上的多个提交压缩成一个提交合并到目标分支，历史更干净；
+
+  - Rebase and merge：把分支的提交“线性”地放到目标分支上，没有单独的合并提交，保留每个提交但改变了提交基底。
+
+- 冲突：如果同一文件在两个分支都改了，Git 会提示冲突，需要先在本地或在 GitHub 上解决冲突再合并。
+
+
+
+上述知识点能帮助你理解 PR 流程与页面上看到的信息。
+
