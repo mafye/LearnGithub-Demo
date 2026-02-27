@@ -108,3 +108,20 @@
 请按照上述步骤在你的本地或编辑器中查看分支内容并确认理解，确认后告知准备继续下一步演示（例如在 feature 分支上运行或创建 Pull Request）。
 
 CI triggered at 2026-02-27 09:41:29 by Copilot
+
+
+
+## GitHub 学习笔记
+
+
+
+- Fork 与 Clone：Fork 是在 GitHub 上把别人的仓库完整复制到你个人账号下，成为你的在线副本；Clone 是把远端仓库复制到本地机器以便查看或开发。
+
+- 贡献（contribution）：指向他人仓库提交代码/修复/文档等改动并通过 Pull Request 请求合并。一般流程：Fork → Clone（到本地）→ 新建分支 → 提交 → Push 到你的 Fork → 发 Pull Request 给上游仓库。
+
+- GitHub Actions：基于仓库里的 .github/workflows/*.yml 定义工作流，在 push、pull_request、schedule 等事件触发时运行，可用于 CI（跑测试、构建）、部署、自动化 issue/PR 管理等。工作流运行结果可在仓库的 Actions 页面查看，或用 CLI 命令 `gh run list` / `gh run view <id> --log`。
+
+- 本仓库演示：已添加一个简单的 CI 工作流 `.github/workflows/ci.yml`，会在 push/PR 时打印信息。本次演示已触发 CI 并将运行日志输出在上方；README 已更新保存学习笔记。
+
+
+
